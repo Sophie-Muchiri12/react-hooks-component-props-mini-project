@@ -1,6 +1,6 @@
 import React from "react";
 
-function Article({title,date,preview,minutes}){
+function Article({title,date,preview,minutes}){ 
 
     const defaultDate = date ||"January 1, 1970"
 
@@ -8,11 +8,11 @@ function Article({title,date,preview,minutes}){
  function MinuteEmoji(minutes){
         let emoji
     if(minutes < 30){
-            const coffeEmojis = Math.ceil(minutes/5)
+            const coffeEmojis = Math.ceil(minutes/5) //SO MATH.CEIL WILL ROUND UP IRREGARDLESS
             emoji ='☕️'.repeat(coffeEmojis);
         }
         else {
-            // For 30 minutes or more, use bento box emoji
+            
             const bentoBoxes = Math.ceil(minutes / 10);
             emoji = '🍱'.repeat(bentoBoxes);
     }
